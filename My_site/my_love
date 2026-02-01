@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для моей любимой ❤️</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #e91e63; /* Романтичный розовый */
+            --secondary: #f0f0f0;
+        }
+
+        /* Нежный анимированный фон для всей страницы */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #fff5f7, #f0f8ff, #fff5f7);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            transition: 0.3s;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Блок с признанием */
+        .love-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(233, 30, 99, 0.15);
+            text-align: center;
+            margin-bottom: 40px;
+            border: 1px solid #ffe1e9;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .love-card h1 {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .love-card p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Сетка проектов (твои старые блоки) */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--secondary);
+            padding: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        /* Падающие сердечки */
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff69b4;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hearts-container" id="hearts"></div>
+
+    <header>
+        <div class="love-card">
+            <h1>Я тебя люблю!Алина ❤️</h1>
+            <p>Ты — самое лучшее, что случилось в моей жизни.</p>
+        </div>
+    </header>
+
+    <main>
+        <h2 style="text-align: center;">Мои успехи и проекты</h2>
+        <div class="projects-grid">
+            <div class="card">
+                <h3>Сайт для тебя</h3>
+                <p>Создал этот сайт специально, чтобы сказать тебе важные слова.</p>
+            </div>
+            <div class="card">
+                <h3>Обучение коду</h3>
+                <p>Теперь я умею создавать сайты и запускать их в сеть!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 • Сделано с любовью, Сыймык</p>
+    </footer>
+
+    <script>
+        function createHeart() {
+            const container = document.getElementById('hearts');
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+            heart.style.fontSize = Math.random() * 10 + 15 + 'px';
+
+            container.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 400);
+    </script>
+</body>
+</html>
