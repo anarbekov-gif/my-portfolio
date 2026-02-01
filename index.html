@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой цифровой штаб</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --accent: #0070f3;
+            --secondary: #f0f0f0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background: var(--bg);
+        }
+        header { border-bottom: 2px solid var(--secondary); padding-bottom: 20px; margin-bottom: 40px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card {
+            padding: 20px;
+            border: 1px solid var(--secondary);
+            border-radius: 8px;
+            transition: 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+        .tag { font-size: 0.8rem; background: var(--secondary); padding: 4px 8px; border-radius: 4px; }
+        footer { margin-top: 60px; font-size: 0.9rem; color: gray; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Привет, я — Сыймык</h1>
+        <p>Разработчик, энтузиаст и автор. Здесь я собираю свои проекты и мысли.</p>
+    </header>
+
+    <main>
+        <h2>🚀 Мои проекты</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="tag">Проект</span>
+                <h3>Название проекта</h3>
+                <p>Краткое описание того, что ты сделал. Нажми, чтобы узнать больше.</p>
+            </div>
+
+            <div class="card">
+                <span class="tag">Статья</span>
+                <h3>Как я запустил этот сайт</h3>
+                <p>История создания моего личного уголка в сети.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 • Связаться со мной: <a href="https://t.me/your_nick">Telegram</a></p>
+    </footer>
+
+</body>
+</html>
