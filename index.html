@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Моё Портфолио</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О себе</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#projects">Проекты</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Главная секция -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Привет, я <span class="highlight">Сыймык</span></h1>
+                <p class="hero-subtitle">Программист</p>
+                <p class="hero-description">Хочу создать интересные проекты и воплощать идеи в жизнь</p>
+                <a href="#projects" class="btn btn-primary">Посмотреть проекты</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- О себе -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">О себе</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Я увлечённый разработчик с интересом к созданию инновационных решений.
+                    Люблю изучать новые технологии и применять их на практике.</p>
+                    <p>Моя цель - создавать проекты, которые решают реальные проблемы и делают жизнь людей лучше.</p>
+                </div>
+
+                <!-- Карточка с резюме -->
+                <div class="resume-card">
+                    <div class="resume-icon">📋</div>
+                    <h3>Моё резюме</h3>
+                    <p>Подробная информация о моём опыте и навыках</p>
+                    <div class="resume-buttons">
+                        <a href="resume.pdf" download class="btn btn-small btn-download">Скачать</a>
+                        <a href="resume.pdf" target="_blank" class="btn btn-small btn-view-resume">Открыть</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Навыки -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Техническая грамотность</h3>
+                    <p>Уверенный пользователь ПК и офисного ПО; умею эффективно работать с большими объемами информации и структурировать данные.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Программирование и разработка</h3>
+                    <p>Обладаю базовыми знаниями языков C# и Python. Имею опыт проектирования Telegram-ботов, веб-приложений и инструментов автоматизации.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>Работа с данными</h3>
+                    <p>Понимаю принципы работы с базами данных и владею основами SQL.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🛠️</div>
+                    <h3>Инструменты</h3>
+                    <p>PyCharm, VS Code, SQL server, LaTeX, Microsoft office</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Проекты -->
+    <section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title">Мои проекты</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/diplom.jpg" alt="Дипломная работа" class="project-img">
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title-clickable" onclick="openModal('modal-diplom')">Дипломная работа</h3>
+                    <p>Выпускная квалификационная работа с использованием LaTeX для оформления и Python для визуализации данных.</p>
+                    <div class="project-tags">
+                        <span class="tag">LaTeX</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card project-card-disabled">
+                <div class="project-image">
+                    <img src="images/stiker.png" alt="Мини-стикер" class="project-img" style="filter: grayscale(1);">
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 style="color: var(--text-light);">Мини-стикер <span class="tag-coming">Скоро!</span></h3>
+                    <p>«Когда что-то учишь, стикеры — незаменимая вещь. Электронные стикеры всегда под рукой».</p>
+                    <div class="project-tags" style="opacity: 0.5;">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tkinter</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card project-card-disabled">
+                <div class="project-image">
+                    <img src="images/translation.jpg" alt="Мини-переводчик" class="project-img" style="filter: grayscale(1);">
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <h3 style="color: var(--text-light);">Мини-переводчик <span class="tag-coming">Скоро!</span></h3>
+                    <p>«Ваш быстрый доступ к переводу в компактном формате. Ничего лишнего — только смысл».</p>
+                    <div class="project-tags" style="opacity: 0.5;">
+                        <span class="tag">React</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Модальное окно: Дипломная работа -->
+    <div id="modal-diplom" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-diplom')">&times;</span>
+
+            <h2>Дипломная работа</h2>
+
+            <div class="modal-section">
+    <h3>📝 Описание проекта</h3>
+
+    <p><strong>Основная цель:</strong> Разработка программного комплекса для поиска самого быстрого способа перевода динамической системы из одного состояния в другое. Особенность проекта — учет «эффекта памяти» в системе (интегро-дифференциальные уравнения), что делает модель применимой в реальных физических и экономических задачах.</p>
+
+    <h4>Что было сделано:</h4>
+    <ul>
+        <li><strong>Математическое моделирование:</strong> Исследована задача быстродействия и применен принцип максимума Понтрягина для нахождения оптимальных траекторий.</li>
+        <li><strong>Сравнительный анализ:</strong> Проведено сравнение точных аналитических решений с результатами численного моделирования (метод Рунге-Кутты 4-го порядка).</li>
+        <li><strong>Разработка ПО:</strong> Создано десктопное приложение на Python с графическим интерфейсом (GUI) и интерактивный модуль в Google Colab.</li>
+        <li><strong>Визуализация:</strong> Реализовано построение динамических графиков состояния системы и режимов управления.</li>
+    </ul>
+
+    <h4>Стек технологий:</h4>
+    <ul>
+        <li><strong>Язык:</strong> Python</li>
+        <li><strong>Библиотеки:</strong> NumPy, Matplotlib, Tkinter</li>
+        <li><strong>Среды:</strong> PyCharm, Google Colab</li>
+    </ul>
+
+    <p><strong>Ключевой результат:</strong> Программа позволяет менять параметры системы «на лету» и мгновенно видеть изменение траектории движения. Это готовый инструмент для анализа процессов с последействием (теплоперенос, рыночные модели).</p>
+
+    <hr> <p><em>Краткий анонс: Исследование и программная реализация задачи быстродействия для систем с последействием.</em></p>
+
+    <div class="links">
+        <a href="https://colab.research.google.com/drive/1sYflpR2aq0N4wyMgkzaCAVsc2KGVBK6u?usp=sharing" target="_blank">🔗 Открыть в Google Colab</a>
+    </div>
+</div>
+
+            <div class="modal-section">
+                <h3>🖼️ Иллюстрации из работы</h3>
+                <div class="modal-gallery">
+                    <img src="images/img_2.png" alt="Скриншот 1">
+                    <img src="images/img.png" alt="Скриншот 2">
+                    <img src="images/img_1.png" alt="Скриншот 3">
+                </div>
+            </div>
+
+
+            <div class="modal-section">
+                 <h3>🛠️ Инструменты</h3>
+                <div class="project-tags">
+        <a href="https://www.latex-project.org/" target="_blank" rel="noopener noreferrer" class="tag-link">
+            <span class="tag">LaTeX</span>
+        </a>
+        <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="tag-link">
+            <span class="tag">Python</span>
+        </a>
+        <a href="https://matplotlib.org/" target="_blank" rel="noopener noreferrer" class="tag-link">
+            <span class="tag">Matplotlib</span>
+        </a>
+        <a href="https://numpy.org/" target="_blank" rel="noopener noreferrer" class="tag-link">
+            <span class="tag">NumPy</span>
+        </a>
+        <a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer" class="tag-link">
+            <span class="tag">Pandas</span>
+        </a>
+    </div>
+</div>
+
+            <div class="modal-section">
+    <h3>📥 Ознакомиться с работой</h3>
+    <div class="resume-buttons" style="justify-content: flex-start; gap: 15px;">
+        <a href="ВКР_Анарбек_уулу_Сыймык.pdf" target="_blank" class="btn btn-view-resume">👁️ Посмотреть онлайн</a>
+        <a href="ВКР_Анарбек_уулу_Сыймык.pdf" download class="btn btn-download-modal">📄 Скачать PDF</a>
+    </div>
+    <p class="download-note" style="margin-top: 10px;">Размер: ~5 MB | Формат: PDF</p>
+</div>
+        </div>
+    </div>
+
+    <!-- Модальное окно: Мини-стикер -->
+    <div id="modal-sticker" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-sticker')">&times;</span>
+
+            <h2>Мини-стикер</h2>
+
+            <div class="modal-section">
+                <h3>📝 Описание проекта</h3>
+                <p>Приложение для создания электронных стикеров с удобной систематизацией и возможностью быстрого доступа. Идеально подходит для запоминания информации и организации заметок при обучении.</p>
+
+                <p><strong>Основные функции:</strong></p>
+                <ul>
+                    <li>Создание и редактирование стикеров</li>
+                    <li>Категоризация по темам</li>
+                    <li>Поиск по содержимому</li>
+                    <li>Цветовая маркировка заметок</li>
+                    <li>Сохранение в локальном хранилище</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>🖼️ Скриншоты</h3>
+                <div class="modal-gallery">
+                    <img src="images/sticker-screen1.jpg" alt="Скриншот 1">
+                    <img src="images/sticker-screen2.jpg" alt="Скриншот 2">
+                    <img src="images/sticker-screen3.jpg" alt="Скриншот 3">
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>💻 Фрагмент кода</h3>
+                <pre><code>import tkinter as tk
+from tkinter import messagebox
+import os
+
+def save_on_close():
+    try:
+        with open("task_data.txt", "w", encoding="utf-8") as f:
+            f.write(task_text.get("1.0", "end-1c"))
+    except Exception as e:
+        print(f"Ошибка сохранения: {e}")
+    root.destroy()
+
+
+def show_menu(event):
+    menu.post(event.x_root, event.y_root)
+
+def make_copy():
+    task_text.event_generate("<<Copy>>")
+
+def make_paste():
+    task_text.event_generate("<<Paste>>")
+
+def make_cut():
+    task_text.event_generate("<<Cut>>")
+
+def select_all():
+    task_text.tag_add("sel", "1.0", "end")
+    return "break"
+
+root = tk.Tk()
+root.title("Стикер")
+root.geometry("240x180")
+root.attributes("-topmost", True)
+root.configure(bg="#fff9c4")
+
+menu = tk.Menu(root, tearoff=0)
+menu.add_command(label="Копировать", command=make_copy)
+menu.add_command(label="Вставить", command=make_paste)
+menu.add_command(label="Вырезать", command=make_cut)
+menu.add_separator()
+menu.add_command(label="Выделить всё", command=select_all)
+
+
+tk.Label(root, text="ТЕКУЩАЯ ЗАДАЧА:", font=("Arial", 8, "bold"),
+         bg="#fff9c4", fg="#857700").pack(pady=(10, 0))
+
+
+task_text = tk.Text(root, font=("Segoe UI", 10), bg="#fff9c4",
+                    relief="flat", padx=10, pady=5, wrap="word",
+                    insertbackground="#857700", undo=True)
+task_text.pack(expand=True, fill="both")
+
+
+task_text.bind("<Button-3>", show_menu)
+
+
+task_text.bind("<Control-a>", select_all)
+task_text.bind("<Control-A>", select_all)
+
+
+if os.path.exists("task_data.txt"):
+    try:
+        with open("task_data.txt", "r", encoding="utf-8") as f:
+            task_text.insert("1.0", f.read())
+    except:
+        pass
+
+tk.Label(root,  font=("Arial", 7, "italic"),
+         bg="#fff9c4", fg="#b2a700").pack(side="bottom", pady=5)
+
+root.protocol("WM_DELETE_WINDOW", save_on_close)
+root.mainloop()
+
+                </code></pre>
+            </div>
+
+            <div class="modal-section">
+                <h3>🛠️ Технологии</h3>
+                <div class="project-tags">
+                    <span class="tag">PyCharm</span>
+                    <span class="tag">Tkinter</span>
+                    <span class="tag"></span>
+                    <span class="tag">LocalStorage</span>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>📥 Скачать приложение</h3>
+                <a href="files/mini-sticker.zip" download class="btn btn-download-modal">💾 Скачать .exe</a>
+                <p class="download-note">Размер: 2.5 MB | Windows 10/11</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>🔗 Ссылки</h3>
+                <div class="modal-links">
+                    <a href="https://github.com/yourusername/mini-sticker" target="_blank" class="modal-link">💻 GitHub</a>
+                    <a href="demo-sticker.html" target="_blank" class="modal-link">🌐 Демо</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно: Мини-переводчик -->
+    <div id="modal-translator" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('modal-translator')">&times;</span>
+
+            <h2>Мини-переводчик</h2>
+
+            <div class="modal-section">
+                <h3>📝 Описание проекта</h3>
+                <p>Компактное приложение для быстрого перевода текста между различными языками. Минималистичный интерфейс позволяет сосредоточиться на самом важном — получении точного перевода.</p>
+
+                <p><strong>Основные возможности:</strong></p>
+                <ul>
+                    <li>Перевод между 50+ языками</li>
+                    <li>Мгновенный результат</li>
+                    <li>История переводов</li>
+                    <li>Копирование одним кликом</li>
+                    <li>Работа без интернета</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h3>🖼️ Скриншоты</h3>
+                <div class="modal-gallery">
+                    <img src="images/translator-screen1.jpg" alt="Скриншот 1">
+                    <img src="images/translator-screen2.jpg" alt="Скриншот 2">
+                    <img src="images/translator-screen3.jpg" alt="Скриншот 3">
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>💻 Фрагмент кода</h3>
+                <pre><code>import React, { useState } from 'react';
+
+function Translator() {
+    const [text, setText] = useState('');
+    const [translation, setTranslation] = useState('');
+
+    const translateText = async () => {
+        const response = await fetch('/api/translate', {
+            method: 'POST',
+            body: JSON.stringify({ text, target: 'ru' })
+        });
+        const data = await response.json();
+        setTranslation(data.translation);
+    };
+
+    return (
+        &lt;div&gt;
+            &lt;textarea value={text} onChange={(e) =&gt; setText(e.target.value)} /&gt;
+            &lt;button onClick={translateText}&gt;Translate&lt;/button&gt;
+            &lt;p&gt;{translation}&lt;/p&gt;
+        &lt;/div&gt;
+    );
+}</code></pre>
+            </div>
+
+            <div class="modal-section">
+                <h3>🛠️ Технологии</h3>
+                <div class="project-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Translation API</span>
+                    <span class="tag">CSS3</span>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>📥 Скачать приложение</h3>
+                <a href="files/mini-translator.exe" download class="btn btn-download-modal">💾 Скачать .exe</a>
+                <p class="download-note">Размер: 3.2 MB | Windows 10/11</p>
+            </div>
+
+            <div class="modal-section">
+                <h3>🔗 Ссылки</h3>
+                <div class="modal-links">
+                    <a href="https://github.com/yourusername/mini-translator" target="_blank" class="modal-link">💻 GitHub</a>
+                    <a href="demo-translator.html" target="_blank" class="modal-link">🌐 Демо</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Контакты -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-content">
+                <p class="contact-text"></p>
+                <div class="contact-links">
+                    <a href="mailto:syimyk.d.anarbekov@gmail.com" class="contact-link">
+                        <span class="contact-icon">📧</span>
+                        Email
+                    </a>
+                    <a href="https://wa.me/996703633725" class="contact-link" target="_blank">
+                        <span class="contact-icon">💬</span>
+                        WhatsApp
+                    </a>
+                    <a href="https://t.me/s_y_i_m_y_k" target="_blank" class="contact-link">
+                        <span class="contact-icon">💬</span>
+                        Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Моё Портфолио</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
