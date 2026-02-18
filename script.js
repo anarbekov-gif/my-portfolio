@@ -37,6 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+function toggleCode(codeId) {
+    const codeBlock = document.getElementById(codeId);
+    const button = event.currentTarget;
+    const icon = button.querySelector('.toggle-icon');
+
+    if (codeBlock.style.display === 'none') {
+        codeBlock.style.display = 'block';
+        icon.textContent = '▼';
+        button.childNodes[1].textContent = ' Скрыть код';
+    } else {
+        codeBlock.style.display = 'none';
+        icon.textContent = '▶';
+        button.childNodes[1].textContent = ' Показать код';
+    }
+}
+
 // 3. Функции модальных окон (ПЕРЕНЕСЕНЫ ВЫШЕ для надежности)
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
