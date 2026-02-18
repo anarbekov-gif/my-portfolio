@@ -483,8 +483,8 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
     animation: fadeIn 0.3s ease;
 }
 
@@ -492,6 +492,7 @@ body {
     background-color: var(--white);
     margin: 50px auto;
     padding: 40px;
+    padding-top: 60px;
     border-radius: 20px;
     width: 90%;
     max-width: 900px;
@@ -502,25 +503,37 @@ body {
 }
 
 .modal-close {
-    position: absolute;
+    position: sticky;
+    top: 0;
     right: 20px;
-    top: 20px;
+    float: right;
     font-size: 35px;
     font-weight: bold;
     color: var(--text-light);
     cursor: pointer;
     transition: var(--transition);
+    z-index: 1000;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-close:hover {
     color: var(--primary-color);
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .modal-content h2 {
     color: var(--text-dark);
     margin-bottom: 2rem;
     font-size: 2rem;
+    clear: both;
 }
 
 .modal-section {
@@ -649,6 +662,116 @@ body {
         opacity: 1;
     }
 }
+
+/* Кнопка раскрытия кода - STICKY */
+.code-toggle-btn {
+    position: sticky;
+    top: 60px;
+    z-index: 999;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.code-toggle-btn:hover {
+    background: #e0e0e0;
+    border-color: #bbb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.toggle-icon {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.code-block-collapsible {
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.code-block-collapsible pre {
+    margin-top: 10px;
+}
+
+/* Стилизация скроллбара внутри модалки */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: var(--light-bg);
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+/* Ссылки на технологии */
+.tag-link {
+    text-decoration: none;
+}
+
+.tag-link .tag {
+    transition: var(--transition);
+}
+
+.tag-link:hover .tag {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+/* Тег "Скоро!" */
+.tag-coming {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 8px;
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Недоступный проект */
+.project-card-disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.project-card-disabled:hover {
+    transform: none;
+    box-shadow: var(--shadow);
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
     .nav-menu {
@@ -678,6 +801,16 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
+    .modal-content {
+        width: 95%;
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+
+    .code-toggle-btn {
+        top: 50px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -688,30 +821,10 @@ body {
     .container {
         padding: 0 15px;
     }
-}
 
-/* Улучшаем плавность и фон */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(15, 23, 42, 0.85); /* Более глубокий цвет из твоей палитры */
-    backdrop-filter: blur(8px); /* Размытие заднего плана */
-    animation: fadeIn 0.3s ease;
-}
-
-/* Стилизация скроллбара внутри модалки (для красоты) */
-.modal-content::-webkit-scrollbar {
-    width: 8px;
-}
-.modal-content::-webkit-scrollbar-track {
-    background: var(--light-bg);
-}
-.modal-content::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 10px;
+    .modal-close {
+        width: 40px;
+        height: 40px;
+        font-size: 28px;
+    }
 }
