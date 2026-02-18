@@ -99,7 +99,7 @@
                     <div class="project-overlay"></div>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title-clickable" onclick="openModal('modal-diplom')">Дипломная работа</h3>
+                    <h3 class="project-title-clickable" onclick="openModal('modal-diplom')">Дипломная работа<span class="tag-coming"></span></h3></h3>
                     <p>Выпускная квалификационная работа с использованием LaTeX для оформления и Python для визуализации данных.</p>
                     <div class="project-tags">
                         <span class="tag">LaTeX</span>
@@ -108,36 +108,39 @@
                 </div>
             </div>
 
-            <div class="project-card project-card-disabled">
+
+            <div class="project-card">
                 <div class="project-image">
-                    <img src="images/stiker.png" alt="Мини-стикер" class="project-img" style="filter: grayscale(1);">
+                    <img src="images/stiker.png" alt="Стикер" class="project-img">
                     <div class="project-overlay"></div>
                 </div>
                 <div class="project-content">
-                    <h3 style="color: var(--text-light);">Мини-стикер <span class="tag-coming">Скоро!</span></h3>
-                    <p>«Когда что-то учишь, стикеры — незаменимая вещь. Электронные стикеры всегда под рукой».</p>
-                    <div class="project-tags" style="opacity: 0.5;">
+                    <h3 class="project-title-clickable" onclick="openModal('modal-sticker')">Стикер <span class="tag-coming"></span></h3>
+                    <p>Маленькое десктопное приложение для Windows — держит нужный текст перед глазами, пока вы работаете или учитесь.</p>
+                    <div class="project-tags">
                         <span class="tag">Python</span>
                         <span class="tag">Tkinter</span>
                     </div>
+
                 </div>
             </div>
 
-            <div class="project-card project-card-disabled">
+            <div class="project-card">
                 <div class="project-image">
-                    <img src="images/translation.jpg" alt="Мини-переводчик" class="project-img" style="filter: grayscale(1);">
+                    <img src="images/translation.jpg" alt="Стикер" class="project-img">
                     <div class="project-overlay"></div>
                 </div>
                 <div class="project-content">
-                    <h3 style="color: var(--text-light);">Мини-переводчик <span class="tag-coming">Скоро!</span></h3>
-                    <p>«Ваш быстрый доступ к переводу в компактном формате. Ничего лишнего — только смысл».</p>
-                    <div class="project-tags" style="opacity: 0.5;">
-                        <span class="tag">React</span>
+                    <h3 class="project-title-clickable" onclick="openModal('modal-translator')">Мини переводчик <span class="tag-coming"></span></h3>
+                    <p>Компактное десктопное приложение для быстрого перевода текста между русским и английским языками.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Tkinter</span>
                         <span class="tag">API</span>
                     </div>
+
                 </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -221,221 +224,248 @@
     </div>
 
     <!-- Модальное окно: Мини-стикер -->
+
     <div id="modal-sticker" class="modal">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal('modal-sticker')">&times;</span>
 
-            <h2>Мини-стикер</h2>
+            <h2>Стикер</h2>
 
             <div class="modal-section">
                 <h3>📝 Описание проекта</h3>
-                <p>Приложение для создания электронных стикеров с удобной систематизацией и возможностью быстрого доступа. Идеально подходит для запоминания информации и организации заметок при обучении.</p>
 
-                <p><strong>Основные функции:</strong></p>
+                <p>Небольшой pet-проект, который вырос из личной потребности: во время учёбы и работы с кодом постоянно не хватало способа держать подсказку или текущую задачу перед глазами — без необходимости переключаться между вкладками.</p>
+
+                <p><strong>Что реализовано:</strong></p>
                 <ul>
-                    <li>Создание и редактирование стикеров</li>
-                    <li>Категоризация по темам</li>
-                    <li>Поиск по содержимому</li>
-                    <li>Цветовая маркировка заметок</li>
-                    <li>Сохранение в локальном хранилище</li>
+                    <li>Окно всегда поверх других приложений — не мешает работе</li>
+                    <li>Автосохранение текста при закрытии и восстановление при следующем запуске</li>
+                    <li>Поддержка стандартных горячих клавиш: Ctrl+C, Ctrl+V, Ctrl+X, Ctrl+Z, Ctrl+A</li>
+                    <li>Контекстное меню по правой кнопке мыши</li>
+                    <li>Сборка в автономный <code>.exe</code> — установка не требуется</li>
                 </ul>
+
+                <p><strong>Чему научился:</strong> работа с Tkinter, упаковка Python-приложения в исполняемый файл через PyInstaller, проектирование минималистичного UI под конкретную задачу.</p>
             </div>
 
             <div class="modal-section">
                 <h3>🖼️ Скриншоты</h3>
                 <div class="modal-gallery">
-                    <img src="images/sticker-screen1.jpg" alt="Скриншот 1">
-                    <img src="images/sticker-screen2.jpg" alt="Скриншот 2">
-                    <img src="images/sticker-screen3.jpg" alt="Скриншот 3">
+                    <img src="images/img_3.png" alt="Скриншот 1">
+                    <img src="images/img_4.png" alt="Скриншот 2">
+                    <img src="images/img_5.png" alt="Скриншот 3">
                 </div>
             </div>
 
             <div class="modal-section">
                 <h3>💻 Фрагмент кода</h3>
-                <pre><code>import tkinter as tk
+                <button class="code-toggle-btn" onclick="toggleCode('code-sticker')">
+                    <span class="toggle-icon">▶</span>
+                </button>
+                <div id="code-sticker" class="code-block-collapsible" style="display: none;">
+                    <pre><code>import tkinter as tk
 from tkinter import messagebox
-import os
+from deep_translator import GoogleTranslator
 
-def save_on_close():
+def translate_text(event=None):
+    text = input_text.get("1.0", "end-1c").strip()
+    if not text:
+        return "break"
+
     try:
-        with open("task_data.txt", "w", encoding="utf-8") as f:
-            f.write(task_text.get("1.0", "end-1c"))
-    except Exception as e:
-        print(f"Ошибка сохранения: {e}")
-    root.destroy()
+        target = 'en' if direction_var.get() == 'RU → EN' else 'ru'
+        translated = GoogleTranslator(source='auto', target=target).translate(text)
 
+        output_text.config(state=tk.NORMAL)
+        output_text.delete("1.0", tk.END)
+        output_text.insert("1.0", translated)
+        output_text.config(state=tk.DISABLED)
+        return "break"
+    except Exception:
+        messagebox.showerror("Ошибка", "Проверьте подключение к интернету")
+        return "break"
 
-def show_menu(event):
-    menu.post(event.x_root, event.y_root)
+def swap_direction():
+    current = direction_var.get()
+    new = 'EN → RU' if current == 'RU → EN' else 'RU → EN'
+    direction_var.set(new)
+    direction_label.config(text=new)
 
-def make_copy():
-    task_text.event_generate("<<Copy>>")
-
-def make_paste():
-    task_text.event_generate("<<Paste>>")
-
-def make_cut():
-    task_text.event_generate("<<Cut>>")
-
-def select_all():
-    task_text.tag_add("sel", "1.0", "end")
+def make_copy_output(event=None):
+    try:
+        text = output_text.get("1.0", "end-1c")
+        if text:
+            root.clipboard_clear()
+            root.clipboard_append(text)
+    except:
+        pass
     return "break"
 
 root = tk.Tk()
-root.title("Стикер")
-root.geometry("240x180")
+root.title("Переводчик")
+root.geometry("260x280")
 root.attributes("-topmost", True)
-root.configure(bg="#fff9c4")
+root.configure(bg="#e3f2fd")
 
-menu = tk.Menu(root, tearoff=0)
-menu.add_command(label="Копировать", command=make_copy)
-menu.add_command(label="Вставить", command=make_paste)
-menu.add_command(label="Вырезать", command=make_cut)
-menu.add_separator()
-menu.add_command(label="Выделить всё", command=select_all)
+direction_var = tk.StringVar(value='RU → EN')
+header_frame = tk.Frame(root, bg="#e3f2fd")
+header_frame.pack(pady=(8, 0))
 
+direction_label = tk.Label(header_frame, text='RU → EN', font=("Arial", 9, "bold"),
+                           bg="#e3f2fd", fg="#1565c0")
+direction_label.pack(side=tk.LEFT, padx=5)
 
-tk.Label(root, text="ТЕКУЩАЯ ЗАДАЧА:", font=("Arial", 8, "bold"),
-         bg="#fff9c4", fg="#857700").pack(pady=(10, 0))
+swap_btn = tk.Button(header_frame, text="⇄", command=swap_direction,
+                     bg="#bbdefb", fg="#1565c0", font=("Arial", 9, "bold"),
+                     relief="flat", cursor="hand2", width=2, bd=0)
+swap_btn.pack(side=tk.LEFT)
 
+input_text = tk.Text(root, font=("Segoe UI", 9), bg="#ffffff", height=4, bd=0,
+                     highlightthickness=1, highlightbackground="#90caf9")
+input_text.pack(padx=10, pady=(5, 3), fill="both", expand=True)
+input_text.bind("<Return>", translate_text)
 
-task_text = tk.Text(root, font=("Segoe UI", 10), bg="#fff9c4",
-                    relief="flat", padx=10, pady=5, wrap="word",
-                    insertbackground="#857700", undo=True)
-task_text.pack(expand=True, fill="both")
+translate_btn = tk.Button(root, text="Перевести", command=translate_text,
+                          bg="#1976d2", fg="white", font=("Arial", 8, "bold"),
+                          relief="flat", cursor="hand2", width=12, bd=0)
+translate_btn.pack(pady=3)
 
+output_text = tk.Text(root, font=("Segoe UI", 9), bg="#bbdefb", height=4, bd=0,
+                      state=tk.DISABLED, highlightthickness=1,
+                      highlightbackground="#90caf9", fg="#0d47a1")
+output_text.pack(padx=10, pady=(0, 5), fill="both", expand=True)
 
-task_text.bind("<Button-3>", show_menu)
-
-
-task_text.bind("<Control-a>", select_all)
-task_text.bind("<Control-A>", select_all)
-
-
-if os.path.exists("task_data.txt"):
-    try:
-        with open("task_data.txt", "r", encoding="utf-8") as f:
-            task_text.insert("1.0", f.read())
-    except:
-        pass
-
-tk.Label(root,  font=("Arial", 7, "italic"),
-         bg="#fff9c4", fg="#b2a700").pack(side="bottom", pady=5)
-
-root.protocol("WM_DELETE_WINDOW", save_on_close)
-root.mainloop()
-
-                </code></pre>
+root.mainloop()  </code></pre>
+                </div>
             </div>
+
 
             <div class="modal-section">
                 <h3>🛠️ Технологии</h3>
                 <div class="project-tags">
-                    <span class="tag">PyCharm</span>
-                    <span class="tag">Tkinter</span>
-                    <span class="tag"></span>
-                    <span class="tag">LocalStorage</span>
+                    <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="tag-link">
+                        <span class="tag">Python</span>
+                    </a>
+                    <a href="https://docs.python.org/3/library/tkinter.html" target="_blank" rel="noopener noreferrer" class="tag-link">
+                        <span class="tag">Tkinter</span>
+                    </a>
+                    <a href="https://pyinstaller.org/" target="_blank" rel="noopener noreferrer" class="tag-link">
+                        <span class="tag">PyInstaller</span>
+                    </a>
                 </div>
             </div>
 
             <div class="modal-section">
                 <h3>📥 Скачать приложение</h3>
-                <a href="files/mini-sticker.zip" download class="btn btn-download-modal">💾 Скачать .exe</a>
-                <p class="download-note">Размер: 2.5 MB | Windows 10/11</p>
-            </div>
-
-            <div class="modal-section">
-                <h3>🔗 Ссылки</h3>
-                <div class="modal-links">
-                    <a href="https://github.com/yourusername/mini-sticker" target="_blank" class="modal-link">💻 GitHub</a>
-                    <a href="demo-sticker.html" target="_blank" class="modal-link">🌐 Демо</a>
+                <div class="resume-buttons" style="justify-content: flex-start; gap: 15px;">
+                    <a href="https://t.me/v_kode_i_zhizni/4" target="_blank" class="btn btn-download-modal">💾 Скачать .exe (Telegram)</a>
+                    <a href="https://t.me/v_kode_i_zhizni" target="_blank" class="btn btn-view-resume">📢 Мой канал</a>
                 </div>
+                <p class="download-note" style="margin-top: 10px;">Размер: 8.0 MB | Windows 10/11</p>
             </div>
         </div>
     </div>
 
     <!-- Модальное окно: Мини-переводчик -->
     <div id="modal-translator" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('modal-translator')">&times;</span>
+    <div class="modal-content">
+        <span class="modal-close" onclick="closeModal('modal-translator')">&times;</span>
 
-            <h2>Мини-переводчик</h2>
+        <h2>Мини-переводчик</h2>
 
-            <div class="modal-section">
-                <h3>📝 Описание проекта</h3>
-                <p>Компактное приложение для быстрого перевода текста между различными языками. Минималистичный интерфейс позволяет сосредоточиться на самом важном — получении точного перевода.</p>
+        <div class="modal-section">
+            <h3>📝 Описание проекта</h3>
 
-                <p><strong>Основные возможности:</strong></p>
-                <ul>
-                    <li>Перевод между 50+ языками</li>
-                    <li>Мгновенный результат</li>
-                    <li>История переводов</li>
-                    <li>Копирование одним кликом</li>
-                    <li>Работа без интернета</li>
-                </ul>
-            </div>
+            <p>При разработке кода приходится создавать десятки переменных, и хорошим тоном считается именование на английском языке. Чтобы не прерывать рабочий процесс поиском перевода в браузере, я создал этот компактный инструмент. Он позволяет мгновенно подобрать точное название для переменной или функции, не закрывая окно IDE</p>
 
-            <div class="modal-section">
-                <h3>🖼️ Скриншоты</h3>
-                <div class="modal-gallery">
-                    <img src="images/translator-screen1.jpg" alt="Скриншот 1">
-                    <img src="images/translator-screen2.jpg" alt="Скриншот 2">
-                    <img src="images/translator-screen3.jpg" alt="Скриншот 3">
-                </div>
-            </div>
+            <p><strong>Что реализовано:</strong></p>
+            <ul>
+                <li>Мгновенный перевод через API Google Translator</li>
+                <li>Окно всегда поверх других окон (Topmost) для удобства работы с кодом</li>
+                <li>Быстрая смена направления перевода (RU ↔ EN) одной кнопкой</li>
+                <li>Полноценная поддержка горячих клавиш и контекстного меню</li>
+                <li>Минималистичный дизайн</li>
+            </ul>
 
-            <div class="modal-section">
-                <h3>💻 Фрагмент кода</h3>
-                <pre><code>import React, { useState } from 'react';
+            <p><strong>Чему научился:</strong> интеграция сторонних API (библиотека <code>deep_translator</code>), работа с многострочными текстовыми полями в Tkinter, обработка исключений при отсутствии сети и кастомизация UI элементов.</p>
+        </div>
 
-function Translator() {
-    const [text, setText] = useState('');
-    const [translation, setTranslation] = useState('');
+        <div class="modal-section">
+            <h3>🖼️ Скриншоты</h3>
+            <div class="modal-gallery">
+                <img src="images/translator_1.png" >
+                <img src="images/translator_2.png" >
+                <img src="images/translator_3.png" >
 
-    const translateText = async () => {
-        const response = await fetch('/api/translate', {
-            method: 'POST',
-            body: JSON.stringify({ text, target: 'ru' })
-        });
-        const data = await response.json();
-        setTranslation(data.translation);
-    };
-
-    return (
-        &lt;div&gt;
-            &lt;textarea value={text} onChange={(e) =&gt; setText(e.target.value)} /&gt;
-            &lt;button onClick={translateText}&gt;Translate&lt;/button&gt;
-            &lt;p&gt;{translation}&lt;/p&gt;
-        &lt;/div&gt;
-    );
-}</code></pre>
-            </div>
-
-            <div class="modal-section">
-                <h3>🛠️ Технологии</h3>
-                <div class="project-tags">
-                    <span class="tag">React</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">Translation API</span>
-                    <span class="tag">CSS3</span>
-                </div>
-            </div>
-
-            <div class="modal-section">
-                <h3>📥 Скачать приложение</h3>
-                <a href="files/mini-translator.exe" download class="btn btn-download-modal">💾 Скачать .exe</a>
-                <p class="download-note">Размер: 3.2 MB | Windows 10/11</p>
-            </div>
-
-            <div class="modal-section">
-                <h3>🔗 Ссылки</h3>
-                <div class="modal-links">
-                    <a href="https://github.com/yourusername/mini-translator" target="_blank" class="modal-link">💻 GitHub</a>
-                    <a href="demo-translator.html" target="_blank" class="modal-link">🌐 Демо</a>
-                </div>
             </div>
         </div>
+
+        <div class="modal-section">
+            <h3>💻 Фрагмент кода</h3>
+            <button class="code-toggle-btn" onclick="toggleCode('code-translator')">
+                <span class="toggle-icon">▶</span>
+            </button>
+            <div id="code-translator" class="code-block-collapsible" style="display: none;">
+                <pre><code>import tkinter as tk
+from deep_translator import GoogleTranslator
+
+def translate_text(event=None):
+    text = input_text.get("1.0", "end-1c").strip()
+    if not text: return "break"
+
+    try:
+        target = 'en' if direction_var.get() == 'RU → EN' else 'ru'
+        translated = GoogleTranslator(source='auto', target=target).translate(text)
+
+        output_text.config(state=tk.NORMAL)
+        output_text.delete("1.0", tk.END)
+        output_text.insert("1.0", translated)
+        output_text.config(state=tk.DISABLED)
+    except Exception:
+        pass
+    return "break"
+
+
+root = tk.Tk()
+root.title("Переводчик")
+root.geometry("260x280")
+root.attributes("-topmost", True)
+root.configure(bg="#e3f2fd")
+
+
+input_text = tk.Text(root, height=4, bd=0, highlightthickness=1)
+input_text.bind("<Return>", translate_text)
+input_text.pack(padx=10, pady=5, fill="both", expand=True)
+
+root.mainloop()  </code></pre>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <h3>🛠️ Технологии</h3>
+            <div class="project-tags">
+                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer" class="tag-link">
+                    <span class="tag">Python</span>
+                </a>
+                <a href="https://pypi.org/project/deep-translator/" target="_blank" rel="noopener noreferrer" class="tag-link">
+                    <span class="tag">Deep Translator API</span>
+                </a>
+                <a href="https://docs.python.org/3/library/tkinter.html" target="_blank" rel="noopener noreferrer" class="tag-link">
+                    <span class="tag">Tkinter UI</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <h3>📥 Скачать приложение</h3>
+            <div class="resume-buttons" style="justify-content: flex-start; gap: 15px;">
+                <a href="https://t.me/v_kode_i_zhizni/5" target="_blank" class="btn btn-download-modal">💾 Скачать .exe (Telegram)</a>
+                <a href="https://t.me/v_kode_i_zhizni" target="_blank" class="btn btn-view-resume">📢 Мой канал</a>
+            </div>
+            <p class="download-note" style="margin-top: 10px;">Размер: ~13.5 MB | Windows 10/11</p>
+        </div>
     </div>
+</div>
 
     <!-- Контакты -->
     <section id="contact" class="section section-alt">
@@ -470,5 +500,4 @@ function Translator() {
 
     <script src="script.js"></script>
 </body>
-
 </html>
